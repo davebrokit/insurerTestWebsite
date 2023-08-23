@@ -1,0 +1,96 @@
+
+
+<div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+    <div class="text">tbd</div>
+    <label class="check-container">Yes
+        <input id="question_y_" type="radio" value="Yes" name="question_">
+        <span class="checkmark"></span>
+    </label>
+    <label class="check-container">No
+        <input id="question_n_" type="radio" value="No"  name="question_" >
+        <span class="checkmark"></span>
+    </label>
+</div>
+
+<!-- checkbox -->
+<div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+    <div class="text">tbd</div>
+    <label class="check-container">Option 1
+        <input id="question_y_" type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+    </label>
+    <label class="check-container">Option 2
+        <input id="question_n_" type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+</div>
+
+<!-- money question-->
+<div id="question_wageroll" class="question Money RISKGROUP_ID_5593">
+    <div class="text">Wageroll</div>
+    <span class="char_label prefix">£</span><input tabindex="1" type="text"
+        id="question_wageroll_input" name="LossofRent" value="0"
+        class="number_input cover Money"><span class="char_label suffix"></span>
+</div>
+
+
+
+<!-- Money question with help -->
+<input type="hidden" id="trigger_2313BuildSIM" name="trigger_2313BuildSIM" value="">
+<div id="question_2313BuildSIM" class="question Money RISKGROUP_ID_5593"><input type="hidden"
+        id="questionName_2313BuildSIM" class="questionName" value="2313BuildSIM">
+    <div class="text">Buildings<a href="" class="help_link"
+            onclick="this.blur(); return false;"><img alt="" src="https://picsum.photos/10/10"
+                class="bozo">
+            <div class="help_text ttRight">Day One Reinstatement Value</div>
+        </a>
+        <div class="info_text">Including Subsidence and Landlords Fixtures and Fittings</div>
+    </div>
+    <span class="char_label prefix">£</span><input tabindex="1" type="text" id="2313BuildSIM"
+        name="2313BuildSIM" value="0" class="number_input cover Money"><span
+        class="char_label suffix"></span>
+    <input type="hidden" id="2313BuildSIM_rate" name="2313BuildSIM_rate" class="rate"
+        value="0.0000">
+    <input type="hidden" id="2313BuildSIM_result" name="2313BuildSIM_result" class="result"
+        value="0">
+</div>
+
+<!-- Subsection -->
+<div class="question SmallTitle">
+    <h5><u><b>Financial</b></u></h5>
+    <div class="info_text"></div>
+</div>
+
+
+<!-- Bold -->
+<div id="question_Declaration5" class="question SmallTitle RISKGROUP_ID_0"><input type="hidden"
+        id="questionName_Declaration5" class="questionName" value="Declaration5">
+    <h5><b>Neither the Proposer, nor any directors or partners in the business or in the name of
+            any other business which any of us had an interest have:-</b></h5>
+    <div class="info_text"></div>
+</div>
+
+<!-- Yes no question  qif -->
+<div id="question_" class="question YesNo">
+    <div class="text">been declared bankrupt or insolvent either as private individuals or in
+        connection with any business within the last ten years.</div>
+    <label class="radio" for="question_y_TBD">
+        <input tabindex="1" type="radio"
+            onclick="this.blur(); document.getElementById('TBD').style=null"
+            name="2313disclosheader4" id="question_y_TBD" value="Yes" class="radio"><span
+            class="radioMark">
+        </span>Yes
+    </label>
+    <label class="radio" for="question_n_TBD"><input tabindex="1" type="radio"
+            onclick="this.blur(); document.getElementById('TBD').style='display: none;'"
+            name="2313disclosheader4" id="question_n_TBD" value="No" checked="checked"
+            class="radio"><span class="radioMark"></span>No
+    </label>
+    <input type="hidden" name="ignore-2313disclosheader4" value="" class="radio-default">
+</div>
+<input type="hidden" id="trigger_2313CCJdetails" name="trigger_2313CCJdetails" value="HIDDEN">
+<div id="TBD" class="question TextArea trigger_question RISKGROUP_ID_0" style="display: none;">
+    <div class="text">Please provide full details:</div>
+    <textarea tabindex="1" id="TBD" name="2313CCJdetails" rows="5"
+        class="text_input"></textarea>
+</div>

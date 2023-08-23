@@ -4,18 +4,323 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test website</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="button-nav add">Test Insurer</a>
+                <div class="dialog" style="display:none">
+                    <div class="title">Add Event</div>
+                </div>
+            </li>
+            <li class="radio">
+                <a href="#" class="button-nav active">Home</a>
+
+                <a href="#" class="button-nav">Products</a>
+
+                <a href="#" class="button-nav">Company</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <p>Test website</p>
-    </body>
+    <div>
+        <h1>Quotation Request</h1>
+        <h2>Demo Insurer Quotation Form for Lucy</h2>
+    </div>
+
+    <hr />
+    <div class="getquote-ui container main">
+
+        <div id="PageButtonsTop" class="submit_buttons SummaryButtons">
+            <input type="button" class="rounded Back QuestionPage_Back" name="QuestionPage_Back" value="Back"
+                onclick="selectPreviousPage(); this.blur(); return false;">
+            <input type="button" class="rounded Next QuestionPage_Next" name="QuestionPage_Next" value="Next"
+                onclick="selectNextPage(); this.blur(); return false;">
+            <input type="button" class="rounded QuestionPage_Save" name="SubmitQuote" value="Finish"
+                onclick="this.blur(); return submitQuote();">
+        </div>
+        <div id="ctl00_MainContent_divGetQuote">
+            <div id="pages">
+                <div class="page page_PageCalculation selected_page" id="page_PageCalculation"
+                    style="min-height: 404px;">
+                    <div id="questions_page_PageCalculation" class="questions">
+                        <h1 class="PageTitle">Basic company details<span class="Multiple"></span></h1>
+
+
+
+                        <div id="question_1" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Company Name:</div>
+                            <input type="text" id="question_in_1" value="" class="">
+                        </div>
+
+
+                        <div id="question_2" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Status of entity:</div>
+                            <input type="text" id="question_in_2" value="" class="">
+                        </div>
+
+
+                        <div id="question_10" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Primary Industry Sector:</div>
+                            <input type="text" id="question_in_10" value="" class="">
+                        </div>
+
+
+                        <div id="question_3" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Primary Address (Address, County, Postcode, Country)</div>
+                            <input type="text" id="question_in_3" value="" class="">
+                        </div>
+
+
+                        <div id="question_4" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Date Established (DD/MM/YYYY)</div>
+                            <input type="text" id="question_in_4" value="" class="">
+                        </div>
+
+
+                        <input type="hidden" id="trigger_LossofRent" name="trigger_LossofRent" value="">
+                        <div id="question_LossofRent" class="question Money RISKGROUP_ID_5593"><input type="hidden"
+                                id="questionName_LossofRent" class="questionName" value="LossofRent">
+                            <div class="text">Last 12 Months Gross Revenue: </div>
+                            <span class="char_label prefix">£</span><input tabindex="1" type="text" id="LossofRent"
+                                name="LossofRent" value="0" class="number_input cover Money"><span
+                                class="char_label suffix"></span>
+                            <input type="hidden" id="LossofRent_rate" name="LossofRent_rate" class="rate" value="0">
+                            <input type="hidden" id="LossofRent_result" name="LossofRent_result" class="result"
+                                value="0">
+                        </div>
+
+                        <div id="question_6" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Description of Business Activites:</div>
+                            <input type="text" id="question_in_6" value="" class="">
+                        </div>
+
+                        <div class="question SmallTitle">
+                            <h5><u><b>Employees</b></u></h5>
+                            <div class="info_text"></div>
+                        </div>
+
+
+                        <input type="hidden" id="trigger_2313Employees" name="trigger_2313Employees" value="">
+                        <div id="question_2313Employees" class="question Number RISKGROUP_ID_5593"><input type="hidden"
+                                id="questionName_2313Employees" class="questionName" value="2313Employees">
+                            <div class="text">Number of Employees</div>
+                            <input tabindex="1" type="text" id="2313Employees" name="2313Employees" value="0"
+                                class="number_input cover Number">
+                        </div>
+
+                        <div id="question_11" class="question YesNo">
+                            <div class="text">All employees (inc. LOSC, trainees, apprentices) paid below PAYE
+                                threshold:</div>
+                            <label class="radio" for="question_y_11">
+                                <input tabindex="1" type="radio"
+                                    onclick="this.blur(); document.getElementById('question_12_d').style=null"
+                                    name="2313disclosheader4" id="question_y_11" value="Yes" class="radio"><span
+                                    class="radioMark">
+                                </span>Yes
+                            </label>
+                            <label class="radio" for="question_n_11"><input tabindex="1" type="radio"
+                                    onclick="this.blur(); document.getElementById('question_12_d').style='display: none;'"
+                                    name="2313disclosheader4" id="question_n_11" value="No" checked="checked"
+                                    class="radio"><span class="radioMark"></span>No
+                            </label>
+                            <input type="hidden" name="ignore-2313disclosheader4" value="" class="radio-default">
+                        </div>
+                        <input type="hidden" id="trigger_2313CCJdetails" name="trigger_2313CCJdetails" value="HIDDEN">
+                        <div id="question_12_d" class="question TextArea trigger_question RISKGROUP_ID_0"
+                            style="display: none;">
+                            <div class="text">Please provide full details:</div>
+                            <textarea tabindex="1" id="question_12" name="2313CCJdetails" rows="5"
+                                class="text_input"></textarea>
+                        </div>
+
+
+
+
+
+                        <div id="question_5" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Employer PAYE No:</div>
+                            <input type="text" id="question_in_5" value="" class="">
+                        </div>
+
+
+                        <input type="hidden" id="trigger_LossofRent_test" name="trigger_LossofRent" value="">
+                        <div id="question_wageroll" class="question Money RISKGROUP_ID_5593"><input type="hidden"
+                                id="questionName_wageroll" class="questionName" value="LossofRent">
+                            <div class="text">Wageroll</div>
+                            <span class="char_label prefix">£</span><input tabindex="1" type="text"
+                                id="question_wageroll_input" name="LossofRent" value="0"
+                                class="number_input cover Money"><span class="char_label suffix"></span>
+                            <input type="hidden" id="question_wageroll_rate" name="LossofRent_rate" class="rate"
+                                value="0">
+                            <input type="hidden" id="question_wageroll_result" name="LossofRent_result" class="result"
+                                value="0">
+                        </div>
+
+                        <h1 class="PageTitle">Property<span class="Multiple"></span></h1>
+
+
+                        <div id="question_23" class="question">
+                            <input type="hidden" class="questionName" value="">
+                            <div class="text">Name of Insured</div>
+                            <input type="text" id="question_in_23" value="" class="">
+                        </div>
+                        <div class="question TextArea trigger_question">
+                            <div class="text">Risk Address:</div>
+                            <textarea tabindex="1" id="question_30" rows="5" class="text_input"></textarea>
+                        </div>
+
+
+                        <div id="question_24" class="question">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Approx. Year Built</div>
+                            <input type="text" id="question_in_24" value="" class="">
+                        </div>
+                        <div id="question_25" class="question">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">No. of Floors: </div>
+                            <input type="text" id="question_in_25" value="" class="">
+                        </div>
+                        <div id="question_26" class="question">
+                            <input type="hidden" class="questionName" value="">
+                            <div class="text">What fire prevention precautions/equipment do you have in place?</div>
+                            <input type="text" id="question_in_26" value="" class="">
+                        </div>
+
+
+                        <div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+                            <div class="text">Is there any history of flood and/or subsidence or in an area susceptible to flood and/or subsidence?</div>
+                            <label class="check-container">Yes
+                                <input id="question_y_27" type="radio" value="Yes" name="question_27">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check-container">No
+                                <input id="question_n_27" type="radio" value="No"  name="question_27" >
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div id="question_32" class="question YesNo">
+                            <div class="text">Intruder Alarm:</div>
+                            <label class="radio" for="question_y_32">
+                                <input tabindex="1" type="radio"
+                                    onclick="this.blur(); document.getElementById('question_33').style=null"
+                                    name="question_32" id="question_y_32" value="Yes" class="radio"><span
+                                    class="radioMark">
+                                </span>Yes
+                            </label>
+                            <label class="radio" for="question_n_32"><input tabindex="1" type="radio"
+                                    onclick="this.blur(); document.getElementById('question_33').style='display: none;'"
+                                    name="question_32" id="question_n_32" value="No" checked="checked"
+                                    class="radio"><span class="radioMark"></span>No
+                            </label>
+                            <input type="hidden" name="ignore-2313disclosheader4" value="" class="radio-default">
+                        </div>
+                        <input type="hidden" id="trigger_2313CCJdetails" name="trigger_2313CCJdetails" value="HIDDEN">
+                        <div id="question_33" class="question TextArea trigger_question RISKGROUP_ID_0" style="display: none;">
+                            <div class="text">Fill out below:</div>
+                            <textarea tabindex="1" id="TBD" name="2313CCJdetails" rows="5"
+                                class="text_input"></textarea>
+                        </div>
+
+                        <!-- Subsection -->
+                        <div class="question SmallTitle">
+                            <h5><u><b>Cover Required</b></u></h5>
+                            <div class="info_text"></div>
+                        </div>
+
+                        <div id="question_sum" class="question Money RISKGROUP_ID_5593">
+                            <div class="text">Building Sum Insured </div>
+                            <span class="char_label prefix">£</span><input tabindex="1" type="text"
+                                id="question_sum_input" name="LossofRent" value="0"
+                                class="number_input cover Money"><span class="char_label suffix"></span>
+                        </div>
+
+                        
+                        <div id="question_stock" class="question Money RISKGROUP_ID_5593">
+                            <div class="text">Stock:</div>
+                            <span class="char_label prefix">£</span><input tabindex="1" type="text"
+                                id="question_stock_input" name="LossofRent" value="0"
+                                class="number_input cover Money"><span class="char_label suffix"></span>
+                        </div>
+
+
+                        <h1 class="PageTitle">Cyber<span class="Multiple"></span></h1>
+
+                        <div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+                            <div class="text">Please confirm whether multi-factor authentication is always enabled on all email accounts for remote access</div>
+                            <label class="check-container">Yes
+                                <input id="question_y_20" type="radio" value="Yes" name="question_20">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check-container">No
+                                <input id="question_n_20" type="radio" value="No"  name="question_20" >
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+                            <div class="text">Do you maintain daily offline back-ups of all critical data?</div>
+                            <label class="check-container">Yes
+                                <input id="question_y_21" type="radio" value="Yes" name="question_21">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check-container">No
+                                <input id="question_n_21" type="radio" value="No"  name="question_21" >
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="question YesNo" style="background-image: none; background-color: rgba(0, 0, 0, 0);">
+                            <div class="text">Are you compliant with the Payment Card Industry Data Security Standards</div>
+                            <label class="check-container">Yes
+                                <input id="question_y_22" type="radio" value="Yes" name="question_22">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check-container">No
+                                <input id="question_n_22" type="radio" value="No"  name="question_22" >
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>               
+
+                        <div id="question_7" class="question Number">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Please confirm the name of your Managed Service Provider (if applicable):
+                            </div>
+                            <input type="text" id="question_in_7" value="" class="">
+                        </div>
+
+
+                        <div style="height: 100px;"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
