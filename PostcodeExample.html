@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="button-nav add">Test Insurer</a>
+                <div class="dialog" style="display:none">
+                    <div class="title">Add Event</div>
+                </div>
+            </li>
+            <li class="radio">
+                <a href="#" class="button-nav active">Home</a>
+
+                <a href="#" class="button-nav">Products</a>
+
+                <a href="#" class="button-nav">Company</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div>
+        <h1>Quotation Request</h1>
+        <h2>Demo Insurer Quotation Form: <span id="demoName"></span></h2>
+    </div>
+
+    <hr />
+    <div class="getquote-ui container main">
+
+        <div id="PageButtonsTop" class="submit_buttons SummaryButtons">
+            <input type="button" class="rounded Back QuestionPage_Back" name="QuestionPage_Back" value="Back"
+                onclick="selectPreviousPage(); this.blur(); return false;">
+            <input type="button" class="rounded Next QuestionPage_Next" name="QuestionPage_Next" value="Next"
+                onclick="selectNextPage(); this.blur(); return false;">
+            <input type="button" class="rounded QuestionPage_Save" name="SubmitQuote" value="Finish"
+                onclick="this.blur(); return submitQuote();">
+        </div>
+        <div id="ctl00_MainContent_divGetQuote">
+            <div id="pages">
+                <div class="page page_PageCalculation selected_page" id="page_PageCalculation"
+                    style="min-height: 404px;">
+                    <div id="questions_page_PageCalculation" class="questions">
+                        <h1 class="PageTitle">Basic company details<span class="Multiple"></span></h1>
+
+
+
+                        <div id="question_3" class="question Number RISKGROUP_ID_5593">
+                            <input type="hidden" class="questionName" value="2313Employees">
+                            <div class="text">Post Code</div>
+                            <input type="text" style="width: 100px;" value="" class="">
+                            <input type="text" style="width: 100px;"value="" class="">
+                        </div>
+
+
+                        <div style="height: 100px;"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
