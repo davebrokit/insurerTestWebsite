@@ -11,9 +11,9 @@
     <title>Test website</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="custom.css">
-    <link rel="stylesheet" href="jquery-ui.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="/custom.css">
+    <link rel="stylesheet" href="/jquery-ui.css">
+    <link rel="stylesheet" href="/nav.css">
 </head>
 
 <body>
@@ -46,11 +46,10 @@
     <hr />
     <div class="getquote-ui container main">
 
+
         <div id="PageButtonsTop" class="submit_buttons SummaryButtons">
-            <input type="button" class="rounded Back QuestionPage_Back" name="QuestionPage_Back" value="Back"
-                onclick="selectPreviousPage(); this.blur(); return false;">
-            <input type="button" class="rounded Next QuestionPage_Next" name="QuestionPage_Next" value="Next"
-                onclick="selectNextPage(); this.blur(); return false;">
+            <input type="button" class="rounded Next QuestionPage_Next" name="QuestionPage_Next" value="Main"
+                onclick="window.location='/main';">
             <input type="button" class="rounded QuestionPage_Save" name="SubmitQuote" value="Finish"
                 onclick="this.blur(); return submitQuote();">
         </div>
