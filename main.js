@@ -15,4 +15,4 @@ setTimeout(function(){
     newInput.id = 'inputField' + (space.children.length + 1);
 
     space.appendChild(newInput)
-}, 3000);
+}, 10*1000);
