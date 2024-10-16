@@ -6,3 +6,13 @@ if(searchParams.has('name')) {
     console.log("name parameter is:" + param);
     document.getElementById('demoName').textContent = param;
 }
+
+
+setTimeout(function(){
+    let space = document.getElementById("addSpace")
+    var newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.id = 'inputField' + (space.children.length + 1);
+
+    space.appendChild(newInput)
+}, 3000);
