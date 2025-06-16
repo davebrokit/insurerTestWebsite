@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+<body>       
+        <div class="container" id="mainEntry">
+        <div class="alert alert-info m-3">
+            Automate tests: User clicks fill button: this will trigger any user interraction we need. Fill script logs actions to local storage so can check against that
+            and what gets filled on screen
+            <ol>
+                <li>Fill single Page</li>
+                <li>Journey: 2 pages. Page loads</li>
+                <li>Journey Validation error - Should not start filling automatically. When go to page D should start filling</li>
+                <li>SPA: Move to page C which is hidden</li>
+                <li>SPA: Move to page D which is hidden (different way)</li>
+                <li>Move to page E which only has 1 input: Hard to identify page without Url (Do we need to hide more inputs?)</li>
+                <li>SPA: Move to page F and G which adds dynamic elements to page using js</li>
+                <li>Add in multiple claims (page refresh)</li>
+                <li>click checkbox mid way to simultate page refreshing mid way through filling. Should just continue</li>
+                <li>SPA: Do nothing. Should detect on previous page and not start filling</li>
+                <li>Reload Page. Should detect on previous page and not start filling</li>
+                <li>SPA: Add error style. Configure error css. Should detect on previous page and not start filling</li>
+                <li>SPA: Next shared button. NBS issue where the next button is shared across all pages</li>
+                <li>Claims error: Fill in claim 1. Page refreshes but validation error still on claim 1 with fields still filled in. Should not start filling claim 2</li>
+                <li>Don't think we should handle: You problem: Manual intervention on claim 2. Go back to claim 1 page. Should not fill claim 2 stuff</li>
+                <li>User clicks a next button we don't have a click handler on. Do we detect we're on the next page</li>
+                <li>User manually reloads/refreshes page half way through filling the page. What happens?</li>
+                <li>Do Journey 2 test. Then when completes test can redo page </li>
+                <li>If statement and go to correct page</li>
+            </ol>
+        </div>
+        <div id ="mainInner">
+            <h1>Page A</h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                 
+                <label for="exampleInputPassword1">Password</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">click me to refresh page mid fill</label>
+            </div>
+            <div class="form-group">
+                <label for="exampleInput3">Any coding qualifications</label>
+                <input  class="form-control" id="exampleInput3">
+            </div>
+            <div class="form-group">
+                <label for="exampleInput4">Client Address</label>
+                <input class="form-control" id="exampleInput4">
+            </div>
+        </div>
+
+        <a href="/journey/pageB.html" class="btn btn-info" role="button">1, 18 - Page B</a>
+
+        <div>
+            <button class="btn btn-primary" id="btnPgC">SPA Page C hidden</button>
+        </div>
+        <div> <button class="btn btn-primary" id="btnPgD">SPA Page D display none</button></div>
+        <div><a href="/journey/pageOnlyOneQ.html" class="btn btn-info" role="button">Page E Only one input</a></div>
+        <div><button class="btn btn-primary" id="btnPgF">SPA Page F js add element</button></div>
+        <div><button class="btn btn-primary" id="btnPgG">SPA Page G js add element</button></div>
+        <div><a href="/journey/pageClaim.html" class="btn btn-danger" role="button">Add a claim</a></div>
+        <div><button class="btn btn-info" id="btnReload">Reload Page</button></div>
+        <div><button class="btn btn-warn" id="btnNothing">SPA Do Nothing button</button></div>
+        <div><button class="btn btn-danger" id="btnAddError">3 - Add Error Style</button></div>
+
+       
+ 
+         
+    </div>
+    
+    <div class="container">
+        <button class="btn btn-primary" id="btnPgShared">SPA Next (Shared next button)</button>
+    </div>
+
+    <div class="container" id="pgC" hidden>
+        <h1>Page C (SPA) Hidden</h1>
+        <div class="form-group">
+            <label >What is your Table</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Name</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Addres</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Count Fingers</label>
+            <input class="form-control" >
+        </div>
+        <button class="btn btn-primary" id="btnPgCBack">Back</button>
+    </div>
+
+    <div class="container" id="pgD" style="display: none;">
+        <h1>Page D (SPA) Display None</h1>
+        <div class="form-group">
+            <label >What is your Table</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Name</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Addres</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Age</label>
+            <input class="form-control" >
+        </div>
+        <button class="btn btn-primary" id="btnPgDBack">Back</button>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
