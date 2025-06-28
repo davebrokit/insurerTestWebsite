@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/automated/common/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+<body>       
+    <div class="container">
+        <div id="divTestResultsContainer" class="alert alert-info m-3">
+            <ul>
+                <li>Regression 1: 2 pages. Page loads</li>
+                <li>Test Name: Regression 2 - 2 pages</li> 
+            </ul>
+            Instructions:
+            <ol>
+                <li>Create new proposal with template "Journey Tests Template" (or using existing one)</li>
+                <li>Fill Site. Page will change</li>
+                <li>Click Test Complete</li>
+            </ol>
+            <div>
+                <button class="btn btn-primary" id="btnTestComplete">Test Complete</button>
+            </div> 
+            <div id="divTestResults" class="alert alert-info m-3">
+                
+            </div>
+        </div>
+    </div>
+    <div class="container" id="mainEntry">
+        <div id ="mainInner">
+            <h1>Page A</h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                 
+                <label for="exampleInputPassword1">Password</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">click me to refresh page mid fill</label>
+            </div>
+            <div class="form-group">
+                <label for="exampleInput3">Any coding qualifications</label>
+                <input  class="form-control" id="exampleInput3">
+            </div>
+            <div class="form-group">
+                <label for="exampleInput4">Client Address</label>
+                <input class="form-control" id="exampleInput4">
+            </div>      
+            <div>
+                <button class="btn btn-primary" id="btnPgC">SPA Page C hidden</button>
+            </div>             
+            <div>
+                <button class="btn btn-outline-danger" style="padding: 0px;">
+                    <span>&#9205;</span>
+                    <span>&#9208;</span>
+                    <span>&#9209;</span>
+                </button>
+                
+        <div class="button-container ml-auto mt-auto">
+            <button class="btn btn-outline-danger ml-auto"> X </button>
+            <button class="btn btn-primary ml-auto"> ↻ </button>
+            <button class="btn btn-success ml-auto"> ⏵ </button>
+        </div>
+
+                <div>
+                    <button class="btn btn-outline-danger ml-auto"><svg width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.54013e-07H4.75V19H0V6.54013e-07Z"></path> <path d="M11.4 0H16.15V19H11.4V0Z"></path></svg></button>
+                    <button class="btn btn-primary ml-auto"><svg width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z"></path></svg></button>
+                </div>
+                <div class="button-container ml-auto mt-auto"><button class="btn btn-outline-danger ml-auto"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 1L0.5 15.5M15 15.5L0.5 1" stroke="black"></path></svg></button><button class="btn btn-outline-primary ml-auto"><svg width="17" height="19" viewBox="0 0 17 19" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z"></path></svg></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="pgC" hidden>
+        <h1>Page C (SPA) Hidden</h1>
+        <div class="form-group">
+            <label >What is your Table</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Name</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Addres</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Count Fingers</label>
+            <input class="form-control" >
+        </div>
+        <button class="btn btn-primary" id="btnPgCBack">Back</button>
+    </div>
+    <script src="/automated/regression2/test2.js"></script>
+</body>
+</html>
