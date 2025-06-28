@@ -13,8 +13,8 @@
         <div id="divTestResultsContainer" class="alert alert-info m-3">
             <ul>
                 <li><a href="/automated/">Main</a></li>
-                <li>Regression 2: 2 pages. Page loads</li>
-                <li>Test Name: Regression 2 - 2 pages</li> 
+                <li>Regression 4: SPA: Move to page C which is hidden</li>
+                <li>Test Name: Regression 4 - SPA Move to page hidden C</li> 
             </ul>
             Instructions:
             <ol>
@@ -22,6 +22,9 @@
                 <li>Fill Site. Page will change</li>
                 <li>Click Test Complete</li>
             </ol>
+            <div>
+                <button class="btn btn-primary" id="btnTestComplete">Test Complete</button>
+            </div> 
             <div id="divTestResults" class="alert alert-info m-3">
                 
             </div>
@@ -53,7 +56,7 @@
                 <input class="form-control" id="exampleInput4">
             </div>      
             <div>
-                <a href="/automated/regression2/Test2pageB.html" class="btn btn-info" role="button">Page B</a>
+                <button class="btn btn-primary" id="btnPgC">SPA Page C hidden</button>
             </div>             
             <div>
                 <button class="btn btn-outline-danger" style="padding: 0px;">
@@ -76,7 +79,26 @@
             </div>
         </div>
     </div>
-    <script src="/automated/common/testHelper.js"></script>
-    <script src="/automated/regression2/test2.js"></script>
+    <div class="container" id="pgC" hidden>
+        <h1>Page C (SPA) Hidden</h1>
+        <div class="form-group">
+            <label >What is your Table</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Name</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Addres</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Count Fingers</label>
+            <input class="form-control" >
+        </div>
+        <button class="btn btn-primary" id="btnPgCBack">Back</button>
+    </div>
+    <script src="/automated/regression4/test4.js"></script>
 </body>
 </html>

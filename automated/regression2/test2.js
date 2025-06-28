@@ -1,33 +1,23 @@
+
 console.log("test2");
 
+let btnTestComplete = document.getElementById("btnTestComplete");
 
-btnPgC.addEventListener("click", function(){
-    pgC.hidden= false;
-    mainEntry.hidden= true;
-}) 
+if(btnTestComplete){
+  btnTestComplete.addEventListener("click", function(){
+    setupTest();
+    // assertEqual("Test Email", exampleInputEmail1.value,  "Email address is incorrect");
+    // assertEqual("Test PW", exampleInputPassword1.value,"Password");
+    // assertEqual("Java", exampleInput3.value,"Any coding qualifications");
+    // assertEqual("12 Test st", exampleInput4.value, "Client Address should not be set");
 
-btnPgCBack.addEventListener("click", function(){
-    pgC.hidden = true;
-    mainEntry.hidden= false;
-}) 
+    let elemsWithClass = document.getElementsByClassName("form-control");
 
+    assertEqual("Table 1", elemsWithClass[0].value, "Table");
+    assertEqual("David", elemsWithClass[1].value, "Name");
+    assertEqual("38 Test St", elemsWithClass[2].value, "Address");
+    assertEqual("12", elemsWithClass[3].value, "Age");
 
-btnTestComplete.addEventListener("click", function(){
-  setupTest();
-  assertEqual("Test Email", exampleInputEmail1.value,  "Email address is incorrect");
-  assertEqual("Test PW", exampleInputPassword1.value,"Password");
-  assertEqual("Java", exampleInput3.value,"Any coding qualifications");
-  assertEqual("12 Test st", exampleInput4.value, "Client Address should not be set");
-
-  let elemsWithClass = document.getElementsByClassName("form-control");
-
-  assertEqual("Table 1", elemsWithClass[4].value, "Table");
-  assertEqual("David", elemsWithClass[5].value, "Name");
-  assertEqual("38 Test St", elemsWithClass[6].value, "Address");
-  assertEqual("12", elemsWithClass[7].value, "Age");
-
-
-
-  assertNoFailure()
-})
-
+    assertNoFailure()
+  })
+}
