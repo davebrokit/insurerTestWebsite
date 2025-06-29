@@ -24,10 +24,6 @@ if (buttonNextPage){
 if(btnTestComplete){
   btnTestComplete.addEventListener("click", function(){
     setupTest();
-    // assertEqual("Test Email", exampleInputEmail1.value,  "Email address is incorrect");
-    // assertEqual("Test PW", exampleInputPassword1.value,"Password");
-    // assertEqual("Java", exampleInput3.value,"Any coding qualifications");
-    // assertEqual("12 Test st", exampleInput4.value, "Client Address should not be set");
 
     let elemsWithClass = document.getElementsByClassName("form-control");
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div id="divTestResultsContainer" class="alert alert-info m-3">
+            <ul>
+                <li><a href="/automated/">Main</a></li>
+                <li>Regression 6: Move to page E which only has 1 input: Hard to identify page without Url </li>
+                <li>Test Name: Regression 6 - Move to page with 1 input</li> 
+            </ul>
+            Instructions:
+            <ol>
+                <li>Create new proposal with template "Journey Tests Template" (or using existing one)</li>
+                <li>Fill Site. Page will change</li>
+                <li>Click Test Complete</li>
+            </ol>
+            <div>
+                <button class="btn btn-primary" id="btnTestComplete">Test Complete</button>
+            </div> 
+            <div id="divTestResults" class="alert alert-info m-3">
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Page Only One Q</h1>
+        <form>
+            <div class="form-group">
+                <label>Only input on page</label>
+                <input class="form-control">
+            </div>
+            <a href="/automated/regression6/Test6.html" class="btn btn-info" role="button">Back</a>
+        </form>
+    </div>
+
+    <script src="/automated/common/testHelper.js"></script>
+    <script src="/automated/regression6/test6.js"></script>
+</body>
+</html>
