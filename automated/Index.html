@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="/automated/common/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
+    <style>
+         li{
+            padding:0.3rem;
+        }
+    </style>
 </head>
 <body>       
     <div class="container">
-        <div class="alert alert-info m-3">
-            Automate tests: User clicks fill button: this will trigger any user interraction we need. Fill script logs actions to local storage so can check against that
-            and what gets filled on screen
+        <div class="alert alert-info m-3" style="color: black;">
+            <h1>Automated tests</h1>
             <ol>
                 <li><a href="/automated/regression1/Test1.html">Fill single Page</a></li>
                 <li><a href="/automated/regression2/Test2.html">Journey: 2 pages. Moves to a new html page</a></li>
-                <li>Journey Validation error - Should not start filling automatically. When go to page D should start filling</li>
+                <li><a href="/automated/regression3/Test3.html">Journey Validation error - Should not start filling automatically. When go to page D should start filling</a></li>
                 <li><a href="/automated/regression4/Test4.html">SPA: Move to page C which is hidden</a></li>
-                <li>SPA: Move to page D which is hidden (different way)</li>
+                <li><a href="/automated/regression5/Test5.html">SPA: Move to page D which is hidden (different way)</a></li>
                 <li>Move to page E which only has 1 input: Hard to identify page without Url (Do we need to hide more inputs?)</li>
                 <li>SPA: Move to page F and G which adds dynamic elements to page using js</li>
                 <li>Add in multiple claims (page refresh)</li>

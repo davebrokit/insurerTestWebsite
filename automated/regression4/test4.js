@@ -1,4 +1,4 @@
-console.log("test2");
+console.log("test4");
 
 
 btnPgC.addEventListener("click", function(){
@@ -14,17 +14,17 @@ btnPgCBack.addEventListener("click", function(){
 
 btnTestComplete.addEventListener("click", function(){
   setupTest();
-  assertEqual("Test Email", exampleInputEmail1.value,  "Email address is incorrect");
-  assertEqual("Test PW", exampleInputPassword1.value,"Password");
-  assertEqual("Java", exampleInput3.value,"Any coding qualifications");
-  assertEqual("12 Test st", exampleInput4.value, "Client Address should not be set");
+  assertEqual("testEmail", exampleInputEmail1.value,  "Email address is incorrect");
+  assertEqual("testPTT", exampleInputPassword1.value,"Password");
+  assertEqual("js", exampleInput3.value,"Any coding qualifications");
+  assertEqual("1808 Fake St", exampleInput4.value, "Client Address should not be set");
 
   let elemsWithClass = document.getElementsByClassName("form-control");
 
-  assertEqual("Table 1", elemsWithClass[4].value, "Table");
-  assertEqual("David", elemsWithClass[5].value, "Name");
-  assertEqual("38 Test St", elemsWithClass[6].value, "Address");
-  assertEqual("12", elemsWithClass[7].value, "Age");
+  assertEqual("Maghongy", elemsWithClass[4].value, "Page C - Table");
+  assertEqual("James", elemsWithClass[5].value, "Page C - Name");
+  assertEqual("88 Drum st", elemsWithClass[6].value, "Page C - Address");
+  assertEqual("10 Fingers", elemsWithClass[7].value, "Page C - Age");
 
   assertNoFailure()
 })
