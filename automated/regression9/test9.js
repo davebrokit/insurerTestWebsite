@@ -23,7 +23,7 @@ passwordInput.addEventListener("change", (e) => {
 })
 
 checkbox.addEventListener("change", () => {
-  window.location.href = "/automated/regression9/Test9.html"
+  location.reload();
 })
 
 btnTestComplete.addEventListener("click",() => {

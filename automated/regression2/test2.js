@@ -14,7 +14,7 @@ if (buttonNextPage){
     success = success && assertEqual("12 Test st", exampleInput4.value, "Client Address should not be set");
 
     if(success === true){
-      window.location.href = "/automated/regression2/Test2pageB.html";
+      window.location.href = "/automated/regression2/test2pageB.html";
     } else {
       setFailed()
     }

@@ -13,7 +13,7 @@ if (buttonNextPage){
     success = success && assertEqual("12 Long St", exampleInput4.value, "Client Address");
 
     if(success === true){
-      window.location.href = "/automated/regression14/Test14pageB.html";
+      window.location.href = "/automated/regression14/test14pageB.html";
     } else {
       setFailed()
     }

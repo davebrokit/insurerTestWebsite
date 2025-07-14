@@ -12,15 +12,13 @@
         <div id="divTestResultsContainer" class="alert alert-info m-3">
             <ul>
                 <li><a href="/automated/">Main</a></li>
-                <li>Regression 6: Move to page E which only has 1 input: Hard to identify page without Url </li>
-                <li>Test Name: Regression 6 - Move to page with 1 input</li> 
+                <li>Regression 14: Move to page E which only has 1 input. Will move to incorrect page</li>
+                <li>Test Name: Regression 14 - Move to wrong page 1 input</li> 
             </ul>
             Instructions:
-            <ol>
-                <li>Create new proposal with template "Journey Tests Template" (or using existing one)</li>
-                <li>Fill Site. Page will change</li>
-                <li>Click Test Complete</li>
-            </ol>
+             
+            <p>3. Click Test Complete To Check this page was not filled</p>
+           
             <div>
                 <button class="btn btn-primary" id="btnTestComplete">Test Complete</button>
             </div> 
@@ -30,16 +28,27 @@
         </div>
     </div>
     <div class="container">
-        <h1>Page Only One Q</h1>
+        <h1>Page B</h1>
         <form>
-            <div class="form-group">
-                <label>Only input on page</label>
-                <input class="form-control">
-            </div>
-            <a href="/automated/regression14/Test14.html" class="btn btn-info" role="button">Back</a>
+        <div class="form-group">
+            <label >What is your Table</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Name</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Addres</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What is your Age</label>
+            <input class="form-control" >
+        </div>
+        <a href="/automated/regression14/test14.html" class="btn btn-info" role="button">Back</a>
         </form>
     </div>
-
     <script src="/automated/common/testHelper.js"></script>
     <script src="/automated/regression14/test14.js"></script>
 </body>
