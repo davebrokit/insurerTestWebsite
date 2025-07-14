@@ -21,21 +21,28 @@
         <ul>
           <li><a href="/automated/">Main</a></li>
           <li>
-            Regression 9: click checkbox mid way to simultate page refreshing
-            mid way through filling. Should just continue
+            Regression 11: Reload Page. Should detect on previous page and not start filling
           </li>
-          <li>Test Name: Regression 9 - Reload page mid fill</li>
+          <li>Test Name: Regression 11 - Reload page - Should not start filling</li>
         </ul>
         Instructions:
         <ol>
-          <li>Fill Site. Page will refresh mid way through filling</li>
-          <li>Click Test Complete</li>
+          <li>Fill Site</li>
+          <li>Should fill this page</li>
+          <li>Page will reload after filling</li>
+          <li><b>What does the inspector now say?</b></li>
         </ol>
         <button
-          class="btn btn-primary"
-          id="btnTestComplete"
+          class="btn btn-success"
+          id="btnTestSuccess"
         >
-          Test Complete
+          Wait for next page
+        </button>
+        <button
+          class="btn btn-danger"
+          id="btnTestFail"
+        >
+          Something else
         </button>
         <div id="divTestResults" class="alert alert-info m-3"></div>
       </div>
@@ -44,47 +51,45 @@
       <div id="mainInner">
         <h1>Page A</h1>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label for="inLanguage">Language</label>
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
+            id="inLanguage"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
           />
           <small id="emailHelp" class="form-text text-muted"
             >We'll never share your email with anyone else.</small
           >
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label>Building Type</label>
           <input
             class="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
+            id="inBuildingType"
+            placeholder="House or Flat"
           />
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >click me to refresh page mid fill</label
-          >
+          Do you have any coding qualifications? <br/>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYesCoding">
+          <label class="form-check-label ml-4" for="radioYesCoding">
+            Yes
+          </label>
         </div>
-        <div class="form-group">
-          <label for="exampleInput3">Any coding qualifications</label>
-          <input class="form-control" id="exampleInput3" />
-        </div>
-        <div class="form-group">
-          <label for="exampleInput4">Client Address</label>
-          <input class="form-control" id="exampleInput4" />
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNoCoding" checked>
+          <label class="form-check-label ml-4" for="radioNoCoding">
+            No
+          </label>
         </div>
       </div>
       <div>
-        <button id="buttonNextPage" class="btn btn-info">Page claim</button>
+        <button id="buttonNextPage" class="btn btn-info">Next Page</button>
       </div>
     </div>
 
     <script src="/automated/common/testHelper.js"></script>
-    <script src="/automated/regression9/test9.js"></script>
+    <script src="/automated/regression11/test11.js"></script>
   </body>
 </html>

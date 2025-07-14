@@ -55,3 +55,14 @@ function createMsgElem(message){
   textElm.innerHTML = message
   divTestResults.appendChild(textElm);
 }
+
+
+function localStorageField(fieldEl, key){
+  let val = localStorage.getItem(key);
+  if(val){
+    fieldEl.value = val;
+  }
+  fieldEl.addEventListener("change", (e) => {
+    localStorage.setItem(key, e.target.value)
+  })
+}

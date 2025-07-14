@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/automated/common/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.css"  crossorigin="anonymous"/>
+    </head>
+  <body>
+    <div class="container">
+      <div id="divTestResultsContainer" class="alert alert-info m-3">
+        <ul>
+          <li><a href="/automated/">Main</a></li>
+          <li>
+            Regression 12: SPA: Next shared button. NBS issue where the next button is shared across all pages
+          </li>
+          <li>Test Name: Regression 12 - Shared Button</li>
+        </ul>
+        Instructions:
+        <ol>
+          <li>Fill Site</li>
+          <li>Should fill this page</li>
+          <li>Will Move to the next page</li>
+          <li><b>On the manual intervention Enter Back then Click the Back Button</b></li>
+          <li><b>Close the Debugger</b></li>
+          <li><b>Restart filling the site</b></li>
+          <li>It should fill to the end (page 4). Click test complete when it does that (or it doesn't)</li>
+        </ol>
+        <div>
+            <button class="btn btn-primary" id="btnTestComplete">Test Complete</button>
+        </div> 
+        <div id="divTestResults" class="alert alert-info m-3">
+            
+        </div>
+      </div>
+    </div>
+    <div class="container" id="mainEntry">
+      <!-- Page 1 -->
+      <div id="pgReg12Pg1" >
+        <h1>Regression 12. Page 1</h1>
+        <div class="form-group">
+          <label for="inPlant">Plant Type</label>
+          <input class="form-control" id="inPlant" aria-describedby="emailHelp" />
+        </div>
+        <div class="form-group">
+          <label>Bonsai Trees are hard to maintain. Are you sure you want one</label>
+          <input class="form-control" id="inBonsai"placeholder="House or Flat" />
+        </div>
+        <div class="form-check">
+          Do you have any plant experince? <br/>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYesCoding">
+          <label class="form-check-label ml-4" for="radioYesCoding">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNoCoding" checked>
+          <label class="form-check-label ml-4" for="radioNoCoding">
+            No
+          </label>
+        </div>
+      </div>
+      <div>
+        <button id="buttonNextPage" class="btn btn-info">Next Page</button>
+        <button id="btnBack"  class="btn btn-primary">Back</button>
+      </div>
+      <!-- Page 2 -->
+      <div id="pgReg12Pg2" style="display: none;">
+        <h1>Regression 12. Page 2</h1>
+        <div class="form-group">
+            <label >Does your house have a Cat?</label>
+            <input id="inManIntervention" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Does your house have a Kitchen?</label>
+            <input id="inKitchen" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >How many bedrooms?</label>
+            <input class="form-control" type="number" >
+        </div>
+      </div>
+      
+      <!-- Page 3 -->
+      <div id="pgReg12Pg3" style="display: none;">
+        <h1>Regression 12. Page 3</h1>
+        <div class="form-group">
+            <label >Which computer make do you have</label>
+            <input id="inComputer" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >What colour is the sky?</label>
+            <input class="form-control" >
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div id="pgReg12Pg4" style="display: none;">
+        <h1>Regression 12. Page 4</h1>
+        <div class="form-group">
+            <label >This is the last page</label>
+            <input id="inLast" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Test question</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Test question</label>
+            <input class="form-control" >
+        </div>
+        <div class="form-group">
+            <label >Test question</label>
+            <input class="form-control" >
+        </div>
+      </div>
+    </div>
+
+    <script src="/automated/common/testHelper.js"></script>
+    <script src="/automated/regression12/test12.js"></script>
+  </body>
+</html>
